@@ -389,11 +389,24 @@
 	
 	
 	<script>
-Function changeColor () {
-var contactForm = document.getElementById ("contactForm") ;
+function changeColor () {
+var contactForm = document.getElementById("contactForm");
 contactForm.style.backgroundColor = "black";
 } 
 ChangeColor();
+
+function submitColor() {
+var submit = document.getElementById("submit") ;
+submit.style.background = "white" ;
+} 
+submitColor() 
+
+function nav () {
+
+var navbar = document.getElementById("submit");
+navbar.style.backgroundColor = "Green" ;
+} 
+nav() 
 
 		window.onscroll = function() {myFunction()};
 		
