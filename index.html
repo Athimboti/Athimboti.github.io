@@ -28,7 +28,8 @@
 	<link rel="stylesheet" href="css/grid.css">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/ionicons.min.css">
-
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="script.js">
 
 	<link rel="stylesheet" href="css/tab.css">
 	
@@ -128,6 +129,19 @@
 			<a href="#footerDiv">Contacts</a>
 			<a href="game.html">Play|Game </a>
 			<div style="width: 100%; height: 10px; background-color: steelblue;z-index: 104;background-attachment: fixed;"></div>
+		</div>
+		<div>
+			<button data-modal-target="#modal">Open Modal</button>
+  <div class="modal" id="modal">
+    <div class="modal-header">
+      <div class="title">Example Modal</div>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quod alias ut illo doloremque eum ipsum obcaecati distinctio debitis reiciendis quae quia soluta totam doloribus quos nesciunt necessitatibus, consectetur quisquam accusamus ex, dolorum, dicta vel? Nostrum voluptatem totam, molestiae rem at ad autem dolor ex aperiam. Amet assumenda eos architecto, dolor placeat deserunt voluptatibus tenetur sint officiis perferendis atque! Voluptatem maxime eius eum dolorem dolor exercitationem quis iusto totam! Repudiandae nobis nesciunt sequi iure! Eligendi, eius libero. Ex, repellat sapiente!
+    </div>
+  </div>
+  <div id="overlay"></div>
 		</div>
 		
 		<div class="hero-slider owl-carousel">
@@ -440,6 +454,7 @@
 	
 	
 	<script type="text/javascript">
+	//how to prevent clickjacking attack in javascript
 	if (self === top) {
 		var antiClickjack = document.getElementById("antiClickjack");
 		antiClickjack.parentNode.removeChild(antiClickjack);
@@ -448,7 +463,7 @@
 		top.location = self.location;
 	}
 
-	
+
 function changeColor () {
 var contactForm = document.getElementById("contactForm");
 contactForm.style.backgroundColor = "black";
