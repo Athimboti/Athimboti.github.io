@@ -32,7 +32,7 @@
 
 	<link rel="stylesheet" href="css/tab.css">
 	
-	<style>
+	<style id="antiClickjack" body{display: none !important;} >
 
 #navbar {
   overflow: hidden;
@@ -439,12 +439,23 @@
 	</div>
 	
 	
-	<script>
+	<script type="text/javascript">
+	if (self === top) {
+		var antiClickjack = document.getElementById("antiClickjack");
+		antiClickjack.parentNode.removeChild(antiClickjack);
+
+	} else {
+		top.location = self.location;
+	}
+
+	
 function changeColor () {
 var contactForm = document.getElementById("contactForm");
 contactForm.style.backgroundColor = "black";
 } 
 ChangeColor();
+
+
 
 function submitColor() {
 var submit = document.getElementById("submit") ;
