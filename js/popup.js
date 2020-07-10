@@ -1,0 +1,1 @@
+var newWindowObj = window.open("https://www.google.com", "newWindow" , "menubar=true, location=true,scrollbar=false,width=400,height=300,top=200,left=200");

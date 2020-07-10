@@ -370,6 +370,10 @@
 										<input id="fileInput" type="file">
 										
 									</div>
+									<div id="logs" >  
+										<input id="fileInput2" type="file">
+										
+									</div>
 									<div class="submit-button text-center">
 										<button class="btn btn-common" id="submit" type="submit">Send Message</button>
 										<div id="msgSubmit" class="h3 text-center hidden"></div> 
@@ -469,6 +473,15 @@
 	} else {
 		top.location = self.location;
 	}
+
+
+
+
+	fetch("users/get_users.php").then(response => {
+		return response.json();
+	}).then(users => {
+		console.log(users);
+	});
 
 
 function changeColor () {
