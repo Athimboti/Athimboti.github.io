@@ -25,7 +25,7 @@ async function getUsers(names) {
 
 function nav () {
     var navbar = document.getElementById("navbar");
-    navbar.style.backgroundColor = "green";
+    navbar.style.backgroundColor = "white";
 }
 
 nav () 
